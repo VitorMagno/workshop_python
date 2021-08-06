@@ -1,4 +1,5 @@
 cardapio = "Lasanha: 8.00\nEstrogonofe: 11.00\nRefrigerante: 3.00\nSuco: 2.50"
+produtos = {"lasanha": 8.00, "estrogonofe": 11.00, "refrigerante": 3.00, "suco": 2.50}
 
 
 def restaurante(valor):
@@ -7,9 +8,11 @@ def restaurante(valor):
     opcao_um = input("escolha lasanha ou estrogonofe:")
     opcao_um = opcao_um.lower()
     if opcao_um == "lasanha":
-        valor = 8.00
+        valor = produtos.get("lasanha", 'produto nao tabelado')
+
     elif opcao_um == "estrogonofe":
-        valor = 11.00
+        valor = produtos.get("estrogonofe", 'produto nao tabelado')
+
     else:
         print("opcao invalida")
         restaurante(0)
@@ -17,9 +20,11 @@ def restaurante(valor):
     opcao_dois = input("escolha refrigerante ou suco:")
     opcao_dois = opcao_dois.lower()
     if opcao_dois == "refrigerante":
-        valor += 3.00
+        valor += produtos.get("refrigerante", 'produto nao tabelado')
+
     elif opcao_dois == "suco":
-        valor += 2.50
+        valor += produtos.get("suco", 'produto nao tabelado')
+
     else:
         print("opcao invalida")
         restaurante(0)
