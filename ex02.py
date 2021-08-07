@@ -36,7 +36,6 @@ def restaurante(valor):
         restaurante(valor)
     elif input().lower() == "n":
         print("obrigado pela preferencia, ate mais")
-        breakpoint()
 
 
 if __name__ == '__main__':
