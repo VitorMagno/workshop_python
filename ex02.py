@@ -32,9 +32,10 @@ def restaurante(valor):
 
     print(f"Deseja fazer mais algum pedido? [S/N]")
 
-    if input().lower() == "s":
+    option = input().lower()
+    if option == "s":
         restaurante(valor)
-    elif input().lower() == "n":
+    elif option == "n":
         print("obrigado pela preferencia, ate mais")
 
 
